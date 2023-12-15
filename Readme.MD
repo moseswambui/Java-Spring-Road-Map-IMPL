@@ -9,6 +9,7 @@
       - Java Regular Expressions
       - Java Files & IO
       - Java Exceptions
+      - Functions
 
 2. Java Object Oriented
       - Java Object
@@ -41,4 +42,11 @@
       - Java List Interface
       - Java Tree Set
       - Java Sorting.
-4. 
+4. Getting Dipper
+      - Memory Management
+      - Collection Framework
+      - Serialization
+      - Network & Sockets
+      - Garbage Collection
+      - Basics Threads
+      - SLF4J
