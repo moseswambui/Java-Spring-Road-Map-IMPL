@@ -1,0 +1,51 @@
+# 1. Primitive Data Types
+- These are the fundamental building blocks for storing simple values.These data types are directly supported by the language and are not objects.
+
+
+# Here are the main primitive data types in Java:
+int: Represents integers.
+
+double: Represents double-precision floating-point numbers.
+  
+float: Represents single-precision floating-point numbers.
+  
+char: Represents a single Unicode character.
+  
+boolean: Represents a boolean value, either true or false.
+  
+byte, short, long: Represent integers of different sizes.
+
+These primitive data types are memory-efficient and are used to store simple values efficiently compared to objects
+  
+# 2. Operators and Expressions
+Operators in Java are symbols that perform operations on variables and values. Expressions, on the other hand, are combinations of variables,
+values, and operators that result in a single value. Understanding operators and expressions is fundamental for performing calculations and manipulating data in Java.
+
+# Below are various types of operators in Java
+### Arithmetic Operators:
+    + (addition)
+    - (subtraction)
+    * (multiplication)
+    / (division)
+    % (modulo)
+
+### Relational Operators:
+    = = (equal to)
+    != (not equal to)
+    > (greater than)
+    < (less than)
+    > = (greater than or equal to)
+    < = (less than or equal to)
+### Logical Operators:
+    && (logical AND)
+    || (logical OR)
+    ! (logical NOT)
+
+### Assignment Operators:
+    = (assignment)
+    + =,-=,*=,/= (compound assignment)
+
+### Increment and Decrement Operators:
+    + + (increment)
+    — (decrement)
+

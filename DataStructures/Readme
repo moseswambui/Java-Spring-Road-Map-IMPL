@@ -1,0 +1,19 @@
+# Data Structures (Arrays, Lists, Maps)
+Data structures are fundamental for organizing and managing collections of data efficiently. In Java,
+commonly used data structures include arrays, lists (such as ArrayList), and maps (such as HashMap).
+
+# Arrays:
+    - Arrays are fixed-size data structures that store elements of the same data type.
+    - They have a contiguous memory allocation and a predefined length, which cannot be changed once the array is created.
+    - Arrays use index-based access to retrieve or modify elements, and they offer faster access times since elements are stored sequentially in memory.
+
+# Lists (ArrayList):
+    - Lists are dynamic-size data structures that can store elements of different data types. ArrayList is a commonly used implementation.
+    - 
+
+# Maps (HashMap):
+    - Maps are key-value pairs that allow efficient retrieval ofvalues based on keys. HashMap is a widely used implementation:
+    - Unlike arrays and lists, HashMaps don't preserve the insertion order of elements.
+    - HashMaps do not allow duplicate keys but permit null values and at most one null key.
+
+#### All Above Data types are ***Mutable***
