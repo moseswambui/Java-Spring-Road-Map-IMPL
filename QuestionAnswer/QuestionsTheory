@@ -1,0 +1,166 @@
+# BASICS - Constructor
+
+### Why do we need constructor in Java?
+    - Java is an object-oriented language, in which we create and use objects. A constructor is a piece of code similar to a method. It is used to create an object and set the initial state of the object.
+    
+    - A constructor is a special function that has same name as class name.
+    
+    - Without a constructor, there is no other way to create an object.
+    
+    - By default, Java provides a default constructor for every object. If we overload a constructor then we have to implement default constructor
+
+### Can we inherit a Constructor?
+    - No, Java does not support inheritance of constructor.
+### Why constructors cannot be final, or abstract in Java?
+    - If we set a method as final it means we do not want any class to override it. But the constructor (as per Java Language
+
+    -Specification) cannot be overridden. So there is no use of marking itfinal.
+
+    - If we set a method as abstract it means that it has no body and it should be implemented in a child class. But the constructor is called implicitly when the new keyword is used. Therefore it needs a body.
+
+    - If we set a method as static it means that it belongs to the class, but not a particular object. The constructor is always called to initialize an object. Therefore, there is no use of marking constructor static
+
+### What is the purpose of ‘this’ keyword in java?
+    - In Java, ‘this’ keyword refers to current instance of the object.
+    
+    - It is useful for differentiating between instance variables and local variables.
+    
+    - It can be used to call constructors. Or it can be used to refer to the instance.
+    
+    - In case of method overriding, this is used for falling the method of current class
+
+# INHERITANCE
+### Which class in Java is superclass of every other class?
+    - Java is an object oriented programming language. In Java, Object class is the superclass of every other class
+
+### Why Java does not support multiple inheritance?
+    - Multiple Inheritance means that a class can inherit behavior from two or more parent classes.
+
+    - The issue with Multiple Inheritance is that both the parent classes may have different implementation for the same method. So they have different ways of doing the same thing. Now which implementation should the child class choose?
+
+    - This leads to ambiguity in Multiple Inheritance. This is the main reason for Java not supporting Multiple Inheritance in implementation.
+
+    - Lets say you have a class TV and another class AtomBomb. Both have method switchOn() but only TV has switchOff() method. If your class inherits from both these classes then you have an issue that you can switchOn() both parents, but switchOff will only switchOff() TV.
+
+    - But you can implement multiple interfaces in Java
+
+### In OOPS, what is meant by composition?
+    - Composition is also known as “has-a” relationship. In composition, “has-a” relation relates two classes. E.g. Class Car has a steering wheel.
+    
+    - If a class holds the instance of another class, then it is called composition.
+
+### How aggregation and composition are different concepts?
+    - In OOPS, Aggregation and Composition are the types of association relations. A composition is a strong relationship. If the composite object is destroyed, then all its parts are destroyed. E.g. A Car has a Steering Wheel. If Car object is destroyed, then there is no meaning of Steering Wheel.
+    - In Aggregation, the relationship is weaker than Composition.
+    - E.g. A Library has students. If a Library is destroyed, Students still exist. So Library and Student are related by Aggregation. A Library has Books. If Library is destroyed, the Books are also destroyed. Books of a Library cannot exist without the Library. So Book and  Library are related by Composition.
+### Why there are no pointers in Java?
+    - In Java there are references instead of pointers. These references point to objects in memory. But there is no direct access to these memory locations. JVM is free to move the objects within VM memory.
+
+    - The absence of pointers helps Java in managing memory and garbage collection effectively. Also it provides developers with convenience of not getting worried about memory allocation and deallocation.
+
+### If there are no pointers in Java, then why do we get NullPointerException?
+    - In Java, the pointer equivalent is Object reference. When we use a .it points to object reference. So JVM uses pointers but programmers only see object references.
+
+    - In case an object reference points to null object, and we try to access a method or member variable on it, then we get NullPointerException.
+### What is the purpose of ‘super’ keyword in java?
+    - ‘super’ keyword is used in the methods or constructor of a child class. It refers to immediate parent class of an object.
+
+    - By using ‘super’ we can call a method of parent class from the method of a child class.
+
+    - We can also call the constructor of a parent class from theconstructor of a child class by using ‘super’ keyword.
+### Is it possible to use this() and super() both in same constructor?
+    - No, Java does not allow using both super() and this() in same constructor. As per Java specification, super() or this() must be the first statement in a constructor.
+
+# STATIC
+
+### In Java, why do we use static variable?
+    - Whenever we want to have a common property for all objects of a class, we use a class level variable i.e. a static variable.
+
+    - This variable is loaded in memory only once at the time of class loading. So it saves memory, since it is not defined per object in Java.
+
+### Why it is not a good practice to create static variables in Java?
+    - Static variables are common to all the objects of a class. If a new object is created, there is no need to test the value of static variable. Any code that uses static variable can be in any state. It can be within a new object or at a class level. So the scope of static variable is open ended in a Java class.
+
+    - If we want tighter control on scope, then variables should be created at the object creation level.
+
+    - Also defining static variables is not a good practice because they goagainst the principles of Object Oriented Programming.
+
+### What is the purpose of static method in Java?
+    - Java provides the feature of static method to create behavior at theclass level. The static method is common to all the objects of a class. We do not need to create any object of a class to call a static method. So it provides convenience of not creating an object for calling it.
+     -Also a static method can access and modify static data members.
+    - This also helps in keeping the behavior as well as state at the class level.
+### What happens when static modifier is not mentioned in the signature of main method?
+    - As per Java specification, main method has to be marked as static.It needs only one argument that is an array of String.
+
+    - A program can compile with a non-static method. But on execution it will give NoSuchMethodError.
+# METHOD OVERLOADING & OVERRIDING
+
+### What is the other name of Method Overloading?
+    - Method Overloading is also known as Static Polymorphism.
+
+### How will you implement method overloading in Java?
+    -In Java, a class can have multiple methods with same name but different arguments. It is called Method Overloading. 
+    - To implement method overloading we have to create two methods with same name in a class and do one/more of the following:
+         - 1. Different number of parameters
+         - 2. Different data type of parameters
+         - 3. Different sequence of data type of parameters
+### Is it allowed to overload main() method in Java?
+    - Yes, Java allows users to create many methods with same name ‘main’. But only public static void main(String[] args) method is used for execution.
+
+### How do we implement method overriding in Java? 
+     - To override a method, we just provide a new implementation of a method with same name in subclass. So there will be at least two implementations of the method with same name.
+     - One implementation is in parent class. And another implementation is in child class.
+
+### Are we allowed to override a static method in Java?
+    - No. Java does not allow overriding a static method. If you create a static method with same name in subclass, then it is a new method,not an overridden method.
+
+### Why Java does not allow overriding a static method?
+    - To override a method, you need an instance of a class. Static method is not associated with any instance of the class. So the concept of overriding does not apply here.
+
+    - Therefore, Java does not allow overriding a static method.
+
+### Is it allowed to override an overloaded method?
+    -Yes. You can override an overloaded method in Java.
+
+### What is the difference between method overloading and method overriding in Java?
+    - Differences between method overloading and overriding are:
+        - 1. Method overloading is static polymorphism. Method overriding is runtime polymorphism.
+        - 2. Method overloading occurs within the same class. Method overriding happens in two classes with hierarchy relationship.
+        -3. Parameters must be different in method overloading. Parameters must be same in method overriding.
+        -4. Method overloading is a compile time concept. Method overriding is a runtime concept.
+
+###  Does Java allow virtual functions?
+    - Yes. All instance methods in Java are virtual functions by default. Only class methods and private instance methods are not virtual methods in Java.
+
+# POLYMORPHISM
+
+### What is Runtime Polymorphism?
+    - Runtime Polymorphism or Dynamic Polymorphism is the polymorphism that exists at runtime. In case of method overriding it is not known which method will be called at runtime. Based on the type of object, JVM decides the exact method that should be called.
+
+    - So at compile time it is not known which method will be called at run time
+
+### Is it possible to achieve Runtime Polymorphism by data members in Java?
+    - No. We need to create Runtime Polymorphism by implementing methods at two levels of inheritance in Java.
+
+### Explain the difference between static and dynamic binding?
+    - In Static binding references are resolved at compile time. In
+
+    - Dynamic binding references are resolved at Run time.
+E.g.
+~~~ 
+Person p = new Person();
+p.walk(); // Java compiler resolves this binding at compile time.
+public void walk(Object o){
+((Person) o).walk(); // this is dynamic binding.
+} 
+~~~
+
+# ABSTRACTION
+
+### What is Abstraction in Object Oriented programming?
+    - Abstraction is the process of hiding certain implementation details  of an object and showing only essential features of the object to outside world.
+    - It is different from Abstract class in Java.
+    - Abstraction process identifies commonalities and hides the complexity of implementation. It helps us in focusing on the interface that we share with the outside world.
+
+### How is Abstraction different from Encapsulation?
+    - Abstraction happens at class level design. It results in hiding the implementation details. Encapsulation is also known as “Information Hiding”. An example of encapsulation is marking the member variables private and providing getter and setter for these member variables
