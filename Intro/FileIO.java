@@ -1,4 +1,5 @@
 package Intro;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -57,8 +58,11 @@ public class FileIO {
             System.out.println("\nContent of the file:");
             System.out.println(content.toString());
 
-        } catch (IOException e) {
-            System.err.println("Error reading the file: " + e.getMessage());
+        } catch (FileNotFoundException e) {
+            System.err.println("File Not Found: " + e.getMessage());
+        }catch (IOException e){
+            System.err.println("Error Reading The File: " + e.getMessage());
+
         }
     }
 }

@@ -164,3 +164,59 @@ public void walk(Object o){
 
 ### How is Abstraction different from Encapsulation?
     - Abstraction happens at class level design. It results in hiding the implementation details. Encapsulation is also known as “Information Hiding”. An example of encapsulation is marking the member variables private and providing getter and setter for these member variables
+
+
+# INTERNATIONALIZATION
+#### What is Locale in Java?
+    - A Locale object represents a specific geographical, political, or cultural region. It is used to locale-sensitive operations in Java.
+    - It helps is following the local conventions of a country, native or region. These conventions can be for formatting the dates, money, numbers etc
+
+### How will you use a specific Locale in Java?
+    - To use a specific Locale, we need to load that Locale. We can use ResourceBundle.getBundle("Locale.UK") method to load a Locale
+
+# SERIALIZATION
+
+### What is the serialization?
+    - Serialization is a process converting an object into a byte array. This byte array represents the class, version and internal state of the object. JVM can use this byte array to transmit/read the object over a network
+
+### What is Deserialization?
+    - Deserialization is the process of reconstructing the object from the serialized state. It is the reverse process of serialization.
+
+### What is Serialization and Deserialization conceptually?
+    - Serialization is to convert Object data into a stream of bytes
+    - Deserialization is to convert a stream of bytes back into a copy of the original object.
+
+### Why do we mark a data member transient?
+    - Member variables of an object are marked transient to indicate that they should not be serialized.
+
+    - During serialization process the transient variables are not considered part of the persistent state of an object.
+
+### Why do we mark a data member transient?
+    - Member variables of an object are marked transient to indicate that they should not be serialized.
+    - During serialization process the transient variables are not considered part of the persistent state of an object.
+
+### Is it allowed to mark a method as transient?
+    - No, Java does not allow marking a method as transient. The transient keyword is valid only for member variables.
+
+### How does marking a field as transient makes it possible to serialize an object?
+    - Let say we have a class ABC that implements Serializable interface, but it contains a member variable object of class XYZ that does not implement Serializable interface. Due to this it is not possible to Serialize the class ABC.
+
+    - To solve this issue, we can mark the member variable XYZ as Transient in class ABC. This will allow us to serialize the class ABC.
+
+
+# GARBAGE COLLECTION
+
+### What is Garbage Collection in Java?
+    - Java has an internal mechanism called Garbage collection to reclaim the memory of unused projects at run time.
+    - Garbage collection is also known as automatic memory management.
+
+### Why Java provides Garbage Collector?
+    - In Java, there are no pointers. Memory management and allocation is done by JVM. Since memory allocation is automated, after some time JVM may go low on memory. At that time, JVM has to free memory from unused objects. To help with the process of reclaiming memory, Java provides an automated process called Garbage Collector.
+
+
+# EXCEPTION HANDLING
+
+### What is Exception Handling in Java?
+    - Java provides Exception Handling mechanism to handle Runtime errors that occur in JVM. There are checked exceptions in a program that we expect to occur in certain situations.
+
+    - Exception handling mechanism catches these checked exceptions  and takes relevant actions.

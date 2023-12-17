@@ -27,7 +27,7 @@ public class FibList {
 
         //Change Element in the array
         fibStringList.set(4, "Three");
-        System.out.println(" New FibonnaciList Elements");
+        System.out.println(" New Fibonnaci List Elements");
         for(String fibStringNum: fibStringList){
             System.out.println(fibStringNum);
         }
